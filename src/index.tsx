@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { splitInWords } from './01-hello-tests/01';
+import { doesStudentLiveIn } from './03-functions/03';
+import { student } from './02-object/02';
 
 
-const sentense = "Hello my friends!"
-const result = splitInWords(sentense)
+let result = doesStudentLiveIn(student, "Monaco")
 console.log(result)
 
 const root = ReactDOM.createRoot(
