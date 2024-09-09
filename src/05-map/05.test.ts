@@ -1,9 +1,7 @@
-import { CityType } from "./02_02";
+import { housesAddress } from "./05_01"
 
-let city: CityType;
-
-beforeEach(() => {
-    city = {
+test('qwe', ()=>{
+    const city = {
         title: "New York",
         houses: [
             {
@@ -61,25 +59,8 @@ beforeEach(() => {
         ],
         citizensNumber: 1000000
     }
-})
 
-// 01. Создайте тип CityType
-// 02. Заполните обьект city, что бы тесты  ниже прошли
-test("test city should contains 3 houses", () => {
-    expect(city.houses.length).toBe(3)
+    const housesInCity = housesAddress(city)
 
-    expect(city.houses[0].buildedAt).toBe(2012);
-    expect(city.houses[0].repaired).toBe(false);
-    expect(city.houses[0].address.number).toBe(100);
-    expect(city.houses[0].address.street.title).toBe("White street");
-
-    expect(city.houses[1].buildedAt).toBe(2008);
-    expect(city.houses[1].repaired).toBe(false);
-    expect(city.houses[1].address.number).toBe(100);
-    expect(city.houses[1].address.street.title).toBe("Happy street");
-
-    expect(city.houses[2].buildedAt).toBe(2020);
-    expect(city.houses[2].repaired).toBe(false);
-    expect(city.houses[2].address.number).toBe(101);
-    expect(city.houses[2].address.street.title).toBe("Happy street");
+    expect(housesInCity.length).toBe(3)
 })
