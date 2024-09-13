@@ -3,20 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { doesStudentLiveIn } from './03-functions/03';
-import { student } from './02-object/02';
+import { ReduceTask } from './task/ReduceTask';
+import { User } from './06-callback/06_01';
 
+// ---------------------------------------------------------------
+// const arrr = ['dolar', 'euro', 'hryvna', 'zlotiy', 'krona']
 
-let result = doesStudentLiveIn(student, "Monaco")
-console.log(result)
+// let resultFind = arrr.find( el => el === 'euro')
+// let indexOfResult = arrr.indexOf('krona')
+
+// console.log(resultFind)
+// console.log(indexOfResult)
+// ---------------------------------------------------------------
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <User />
 );
 
 // If you want to start measuring performance in your app, pass a function
