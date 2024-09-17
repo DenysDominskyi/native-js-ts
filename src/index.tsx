@@ -6,14 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { ReduceTask } from './task/ReduceTask';
 import { User } from './06-callback/06_01';
 
+
 // ---------------------------------------------------------------
-// const arrr = ['dolar', 'euro', 'hryvna', 'zlotiy', 'krona']
 
-// let resultFind = arrr.find( el => el === 'euro')
-// let indexOfResult = arrr.indexOf('krona')
-
-// console.log(resultFind)
-// console.log(indexOfResult)
 // ---------------------------------------------------------------
 
 
