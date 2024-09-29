@@ -1,13 +1,15 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ReduceTask } from './task/ReduceTask';
 import { User } from './06-callback/06_01';
 
-
 // ---------------------------------------------------------------
+// function carCreator (key: string, model: any) {
+//   return { [key]: model }
+// }
+
+// const newCar = carCreator('audi', 'A8')
+// console.log(newCar)
 
 // ---------------------------------------------------------------
 

@@ -22,7 +22,8 @@ export const User = () => {
         <div>
             <textarea
                 onBlur={focusLostHandler}
-                onChange={onChangeHandler}>
+                onChange={onChangeHandler}
+                value={'Name'}>
                 Name
             </textarea>
             <input type="text" />

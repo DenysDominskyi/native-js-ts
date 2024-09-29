@@ -24,3 +24,11 @@ export const usersArray = [
 ]
 
 // usersArray.find(u => u.id === 1)
+
+
+function carCreator (key: string, value: any) {
+    return { [key]: value }
+}
+
+const newCar = carCreator('audi', 'A8')
+console.log(newCar)
