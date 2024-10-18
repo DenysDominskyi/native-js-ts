@@ -1,6 +1,7 @@
 function increaseAge (u: UserType) {
     u.age++
 }
+
 type UserType = {
     name: string
     age: number
