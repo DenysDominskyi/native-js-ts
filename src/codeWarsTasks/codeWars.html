@@ -8,53 +8,8 @@
 </head>
 
 <body>
-    <script>
 
-
-
-
-        // task #1
-
-        function getCount(str) {
-            const vowels = 'aeiou'
-            return str.split('').reduce((acc, item) => {
-                vowels.includes(item) ? acc++ : acc
-                return acc
-            }, 0);
-        }
-
-        // console.log(getCount('asdasdasdgarewrteargbvnbvbmouip'))
-
-
-        // task #2
-        
-        function squareDigits(num) {
-            const arr = String(num).split('').map(n => n * n).join('')
-            return Number(arr);
-        }
-        
-        // console.log(squareDigits(9119))
-        
-        
-        // task #3
-
-        function highAndLow(numbers){
-            const arr = numbers.split(' ').map(Number)
-            return `${Math.max(...arr)} ${Math.min(...arr)}`
-        }
-
-        // console.log(highAndLow("1 9 3 4 -5"))
-
-
-
-
-
-        
-
-
-
-    </script>
-
+    <script src="./tasks.js"></script>
 </body>
 
 </html>
