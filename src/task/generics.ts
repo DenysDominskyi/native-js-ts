@@ -50,3 +50,19 @@ console.log(descriptions) // ["Alice is 25 years old", "Bob is 30 years old"]
 function mapArray<T, U>(arr: T[], transformer: (el: T) => U) {
   arr.map(transformer)
 }
+
+    // ======-------------- Task 3 --------------======
+
+// Строки
+const stringArray = ['apple', 'banana', 'cherry']
+const result111 = updateArray(stringArray, 'banana') // ['apple', 'banana', 'cherry']
+const result222 = updateArray(stringArray, 'date') // ['apple', 'banana', 'cherry', 'date']
+
+// Числа
+const numberArray = [1, 2, 3]
+const result333 = updateArray(numberArray, 2) // [1, 2, 3]
+const result444 = updateArray(numberArray, 4) // [1, 2, 3, 4]
+
+function updateArray <T>(arr: T[], elemen: T) {
+    return arr.includes(elemen) ? arr : [...arr, elemen]
+}
