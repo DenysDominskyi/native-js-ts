@@ -43,7 +43,6 @@ function descendingOrder(n) {
     10
   );
 }
-
 // console.log(descendingOrder(145263))
 
 // task 5
@@ -76,14 +75,26 @@ function likes(names) {
 
 // console.log(likes(["Alex", "Jacob", "Mark", "Max"]))
 
-// task 6 Get the Middle Character
+// task 6
+// Get the Middle Character
 
 function getMiddle(s) {
-    const mid = Math.floor(s.length / 2)
-    return s.length % 2 === 0 ? s.slice(mid - 1, mid + 1) : s.slice(mid, mid + 1)
+  const mid = Math.floor(s.length / 2);
+  return s.length % 2 === 0 ? s.slice(mid - 1, mid + 1) : s.slice(mid, mid + 1);
 }
 
-console.log(getMiddle("middle"));
+// console.log(getMiddle("middle"))
 
 // task 7
-// ...
+// Multiples of 3 or 5
+
+function solution(number) {
+  let result = 0;
+  for (let i = 1; i < number; i++) {
+    if (!(i % 3 && i % 5)) {
+      result += i;
+    }
+  }
+  return result;
+}
+
