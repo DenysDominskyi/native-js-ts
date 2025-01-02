@@ -101,10 +101,30 @@ function solution(number) {
 // task 8
 // Create Phone Number
 
-function createPhoneNumber(numbers){
-  return `(${numbers.slice(0, 3).join('')}) ${numbers.slice(3, 6).join('')}-${numbers.slice(6).join('')}`
+function createPhoneNumber(numbers) {
+  return `(${numbers.slice(0, 3).join("")}) ${numbers.slice(3, 6).join("")}-${numbers.slice(6).join("")}`;
 }
 
 // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])) // => returns "(123) 456-7890"
 
 // task 9
+// You're a square!
+
+function isSquare(n) {
+  if (n < 0) {
+    return false;
+  }
+  const root = Math.sqrt(n);
+  return Number.isInteger(root);
+}
+
+// task 10
+// Sum of Digits / Digital Root
+
+function digitalRoot(n) {
+  while(n >= 10) {
+    n = n.toString().split('').reduce((sum, n) => sum + Number(n), 0)
+  }
+  return n
+}
+console.log(digitalRoot(493193));
