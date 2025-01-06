@@ -127,4 +127,20 @@ function digitalRoot(n) {
   }
   return n
 }
-console.log(digitalRoot(493193));
+// console.log(digitalRoot(493193));
+
+
+// task 11
+// Mumbling
+function accum(s) {
+  if (typeof s !== 'string' || !/^[a-zA-Z]+$/.test(s)) {
+    throw new Error("Input must be a string containing only letters from a..z or A..Z");
+  }
+
+  return s
+    .split('')
+    .map((char, index) => char.toUpperCase() + char.toLowerCase().repeat(index))
+    .join('-');
+}
+
+console.log(accum("RqaEzty"));
