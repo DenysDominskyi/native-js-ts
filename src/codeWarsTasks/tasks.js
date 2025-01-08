@@ -142,5 +142,32 @@ function accum(s) {
     .map((char, index) => char.toUpperCase() + char.toLowerCase().repeat(index))
     .join('-');
 }
+// console.log(accum("RqaEzty"));
 
-console.log(accum("RqaEzty"));
+// task 12
+
+
+function duplicateCount(text) {
+  // Convert the text to lowercase to ensure case-insensitivity
+  text = text.toLowerCase();
+  
+  // Create an object to store character counts
+  const charCount = {};
+
+  // Count occurrences of each character
+  for (let char of text) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  // Count distinct characters that appear more than once
+  let duplicates = 0;
+  for (let count of Object.values(charCount)) {
+    if (count > 1) {
+      duplicates++;
+    }
+  }
+
+  return duplicates;
+}
+
+// console.log(duplicateCount("indivisibility"))
