@@ -145,20 +145,18 @@ function accum(s) {
 // console.log(accum("RqaEzty"));
 
 // task 12
-
-
 function duplicateCount(text) {
   // Convert the text to lowercase to ensure case-insensitivity
   text = text.toLowerCase();
   
   // Create an object to store character counts
   const charCount = {};
-
+  
   // Count occurrences of each character
   for (let char of text) {
     charCount[char] = (charCount[char] || 0) + 1;
   }
-
+  
   // Count distinct characters that appear more than once
   let duplicates = 0;
   for (let count of Object.values(charCount)) {
@@ -166,8 +164,25 @@ function duplicateCount(text) {
       duplicates++;
     }
   }
-
+  
   return duplicates;
 }
-
 // console.log(duplicateCount("indivisibility"))
+
+// task 13
+// function findOdd(A) {
+//   const numCount = {};
+//   let result
+//   for (let num of A) {
+//     numCount[num] = (numCount[num] || 0) + 1;
+//   }
+//   for(let key in numCount) {
+//     if(numCount[key] % 2 !== 0) {
+//       result = key
+//     }
+//   }
+//   return Number(result);
+// }
+const findOdd = (xs) => xs.reduce((a, b) => a ^ b); //best practices
+
+console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
