@@ -189,3 +189,26 @@ const findOdd = (xs) => xs.reduce((a, b) => a ^ b); //best practices
 
 // task 14
 const isIsogram = (str) => new Set(str.toLowerCase()).size === str.length
+
+// task 15
+function XO(str) {
+  
+  let xCount = (str.match(/x/gi) || []).length;
+  let oCount = (str.match(/o/gi) || []).length;
+  return xCount === oCount;
+}
+//console.log(XO("oooxxX")) //=> true
+//console.log(XO("xooxx")) //=> false
+
+
+// task 16
+function findOutlier(integers){
+  let oddNum = []
+  let evenNum = []
+  for (let n of integers) {
+    n % 2 === 0 ? evenNum.push(n) : oddNum.push(n)
+    if (oddNum.length > 1 && evenNum.length === 1) return evenNum[0]
+    if (evenNum.length > 1 && oddNum.length === 1) return oddNum[0]
+  }
+}
+// console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21]))
