@@ -212,3 +212,17 @@ function findOutlier(integers){
   }
 }
 // console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21]))
+
+
+// task 17
+function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map((char, _, charsArr)=>{
+      return charsArr.indexOf(char) == charsArr.lastIndexOf(char) ? '(' : ')'
+    })
+    .join('');
+}
+
+// console.log(duplicateEncode("recede"))  // =>  "()()()"
